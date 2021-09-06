@@ -1,0 +1,7 @@
+<div class="header">
+  <div class="title">{{title}}</div>
+  <div class="actions">
+    <ng-template *ngFor="let action of actions" [ngTemplateOutlet]="action.template"></ng-template>
+  </div>
+</div>
+<ng-content></ng-content>

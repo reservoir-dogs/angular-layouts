@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row flex-row-reverse">
+    <div class="col-3 summary">
+      Sommaire
+      <ul id="menu">
+        <li *ngFor="let title of titles">
+          <a routerLink='/sandbox/composants/button/detail' fragment="{{title.id}}">{{title.innerHTML}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-9">
+      <article>
+        <section>
+          <h4 id="utilisation">Utilisation</h4>
+          <p>
+            Voici une utilisation basique de cette mise en page.
+          </p>
+        </section>
+        <exemple-modele nomFichier="{{path}}/page-default">
+          <page-default></page-default>
+        </exemple-modele>
+      </article>
+    </div>
+  </div>
+</div>

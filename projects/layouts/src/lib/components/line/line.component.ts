@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'rp-line',
+    selector: 'line',
     templateUrl: './line.component.html',
     styleUrls: ['./line.component.scss'],
 })

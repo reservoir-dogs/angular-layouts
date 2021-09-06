@@ -1,15 +1,26 @@
-<rp-form>
-  <action>
-    <button>Envoyer</button>
-  </action>
-  <content>
-    <rp-line>
-      <div>Champs 1</div>
-      <div>Champs 2</div>
-    </rp-line>
-    <rp-line>
-      <div>Champs 3</div>
-      <div>Champs 4</div>
-    </rp-line>
-  </content>
-</rp-form>
+<form #user="ngForm" (submit)="verify(user.valid)">
+  <line>
+    <mat-form-field appearance="fill">
+      <mat-label>First name</mat-label>
+      <input matInput name="firstName" [(ngModel)]="firstName" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Last name</mat-label>
+      <input matInput name="lastName" [(ngModel)]="lastName" required>
+    </mat-form-field>
+  </line>
+  <line>
+    <mat-form-field appearance="fill">
+      <mat-label>Zip code</mat-label>
+      <input matInput type="number" name="zipCode" [(ngModel)]="zipCode">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Town</mat-label>
+      <input matInput name="town" [(ngModel)]="town">
+    </mat-form-field>
+  </line>
+  <button mat-flat-button color="accent" type="button" *action>Cancel</button>
+  <button mat-flat-button color="primary" *action>Send</button>
+</form>
+<small>Form valid : {{user.valid}}</small>
+<div>{{message}}</div>

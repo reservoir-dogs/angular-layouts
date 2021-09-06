@@ -1,6 +1,6 @@
-<rp-line>
-  <ng-content select="content"></ng-content>
-</rp-line>
-<rp-line>
-  <ng-content select="action"></ng-content>
-</rp-line>
+<div class="content">
+  <ng-content></ng-content>
+</div>
+<div class="actions">
+  <ng-template *ngFor="let action of actions" [ngTemplateOutlet]="action.template"></ng-template>
+</div>

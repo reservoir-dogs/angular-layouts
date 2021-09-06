@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { LineModule } from './sandbox/line-documentation/line.module';
 import { FormModule } from './sandbox/form-documentation/form.module';
 import { SandBoxComponent } from './sandbox/sandbox.component';
+import { PageModule } from './sandbox/page-documentation/page.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SandBoxComponent } from './sandbox/sandbox.component';
     MatListModule,
     LineModule,
     FormModule,
+    PageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

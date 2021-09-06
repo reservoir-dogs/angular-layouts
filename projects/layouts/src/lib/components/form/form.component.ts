@@ -1,11 +1,11 @@
-import { Component, ViewChildren } from '@angular/core';
+import { Component, ContentChildren, QueryList } from '@angular/core';
+import { ActionDirective } from '../../directives/action.directive';
 
 @Component({
-  selector: 'rp-form',
+  selector: 'form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-
-  constructor() { }
+  @ContentChildren(ActionDirective) actions: QueryList<ActionDirective> | undefined;
 }

@@ -1,0 +1,13 @@
+page {
+  ::ng-deep {
+    .title {
+      font-size: 32pt;
+      font-weight: bold;
+      line-height: 1em;
+    }
+
+    .actions > * {
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'form-default',
   templateUrl: './form-default.component.html',
   styleUrls: ['./form-default.component.scss']
 })
-export class FormDefaultComponent implements OnInit {
+export class FormDefaultComponent {
+  @Input() message: string = '';
 
-  constructor() { }
+  firstName: string = 'Denis';
+  lastName: string = 'RUNGET';
+  zipCode: string = '49124';
+  town: string = 'Le Plessis-Grammoire';
 
-  ngOnInit(): void {
+  verify(valid: boolean | null): void {
+    this.message = '';
+    if (valid)
+      this.message = "Form sended";
   }
-
 }
