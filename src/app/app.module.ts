@@ -1,22 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LineDocumentationComponent } from './src/sandbox/line-documentation/line-documentation.component';
-import { MatTabsModule } from '@angular/material';
+import { LineModule } from './sandbox/line-documentation/line.module';
+import { FormModule } from './sandbox/form-documentation/form.module';
+import { SandBoxComponent } from './sandbox/sandbox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LineDocumentationComponent
+    SandBoxComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
-    MatTabsModule,
+    MatSidenavModule,
+    MatListModule,
+    LineModule,
+    FormModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

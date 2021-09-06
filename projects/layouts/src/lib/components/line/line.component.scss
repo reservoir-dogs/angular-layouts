@@ -1,7 +1,6 @@
 :host {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
 
     ::ng-deep {
         > * {
@@ -10,11 +9,8 @@
             flex-grow: 1;
             max-width: 100%;
             position: relative;
-            padding: 0 15px;
+            width: 100%;
 
-            &:not(.auto) {
-                width: 100%;
-            }
             &.auto {
                 flex: 0 0 auto;
                 width: auto;

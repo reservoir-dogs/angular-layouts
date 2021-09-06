@@ -1,0 +1,17 @@
+:host {
+  mat-drawer-container {
+    height: 100vh;
+
+    mat-drawer {
+      width: 200px;
+    }
+    mat-drawer-content {
+      margin: 0 10px;
+    }
+
+    .active {
+      background: rgba(63, 81, 181, 0.15);
+      color: #3f51b5;
+    }
+  }
+}

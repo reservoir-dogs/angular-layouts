@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-tab-group #tab id="element" (created)="gereAffichage()">
+    <mat-tab label="Démo">
+      <ng-content></ng-content>
+    </mat-tab>
+    <mat-tab label="Html">
+      <pre><code *ngIf="html" class="xml" highlight [code]="html"></code></pre>
+    </mat-tab>
+    <mat-tab label="TypeScript">
+      <pre><code *ngIf="ts" class="typescript" highlight [code]="ts"></code></pre>
+    </mat-tab>
+    <mat-tab label="Style">
+      <pre><code *ngIf="scss" class="css" highlight [code]="scss"></code></pre>
+    </mat-tab>
+  </mat-tab-group>
+</div>

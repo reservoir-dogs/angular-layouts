@@ -8,12 +8,6 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "paths": {
-      "layouts": [
-        "dist/layouts/layouts",
-        "dist/layouts"
-      ]
-    },
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -25,7 +19,12 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@reservoir-prog/layouts": [
+        "projects/layouts/src/public-api.ts"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
